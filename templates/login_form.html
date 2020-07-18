@@ -1,0 +1,29 @@
+<html>
+<body>
+<h3 style="color: red">{{message}}</h3>
+
+<h2>Login form</h2>
+<div>
+    <p>To login, please enter your username. Also, take your photo using the web camera.</p>
+    <p>Press the <b>Snap</b> button to take a photo. You will see it in the box at the bottom of the page.</p>
+    <p>You can press <b>Snap</b> several times until you will think that you take a suitable photo.</p>
+    <p>When you are ready, press the <b>Submit</b> button. Our system will check whether you can access the admin panel.</p>
+</div>
+
+<form id="loginForm" action="" method="post" novalidate>
+    {{ form.hidden_tag() }} 
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}
+    </p> 
+    <input type="button" onclick="upload()" value="Submit">
+</form>
+
+<div id="my_camera"></div>
+<br>
+<input type="button" onclick="snap()" value="Snap">
+<br>
+<hr>
+<div id="results"></div>
+</body>
+</html>

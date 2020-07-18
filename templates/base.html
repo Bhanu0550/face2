@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script src="/static/webcam.js"></script>
+        <script src="/static/custom.js"></script>
+      
+      {% if title %}
+      <title>{{ title }} - Admin panel</title>
+      {% else %}
+      <title>Admin panel</title>
+      {% endif %}
+    </head>
+
+    <body>
+        <div><a href="{{ url_for('index') }}">Login to admin panel</a></div>
+        <hr>
+        <div id="content"></div>           
+    </body>
+</html>
